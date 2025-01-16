@@ -23,8 +23,7 @@
 - **terminal_history.txt**: История команд, выполненных в процессе выполнения работы.
 - **exp_res.txt**: Текстовый файл с результатами эксперимента.
 - **screens/**: Скриншоты процесса работы.
-
-- Записи экрана во время эксперимента находятся на [диске](https://drive.google.com/drive/folders/1VqcuCw3IaPVtw4j6ePRywP895PkENoX1?usp=sharing).
+- **Записи экрана** во время эксперимента находятся на [диске](https://drive.google.com/drive/folders/1VqcuCw3IaPVtw4j6ePRywP895PkENoX1?usp=sharing).
 
 ## Запуск
 Для выполнения экспериментов необходимо развернуть кластер Kubernetes с помощью Minikube. Пример запуска Minikube:
@@ -116,9 +115,7 @@ kubectl scale --replicas=<число_реплик> deployment/web
 
 Из результатов эксперимента можно установить, что для обеспечения довольно высокой доступности приложения достаточно 4 реплик приложения в условиях симулированной ситуации.
 
-### Видео результатов
-
-[![Видео с результатами](./screens/video-thumbnail.png)](https://drive.google.com/drive/u/0/folders/1VqcuCw3IaPVtw4j6ePRywP895PkENoX1)
+**Записи экрана** во время эксперимента находятся на [диске](https://drive.google.com/drive/folders/1VqcuCw3IaPVtw4j6ePRywP895PkENoX1?usp=sharing).
 
 ## Список использованных источников
 1. https://doom.fandom.com/wiki/SPISPOPD
