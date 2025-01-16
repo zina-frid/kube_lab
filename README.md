@@ -19,7 +19,6 @@
 - **web_server.py**: Исходный код простого веб-сервера.
 - **availability_test.py**: Скрипт для проверки доступности приложения во время эксперимента.
 - **course-paper-manifests/**: YAML-файлы для установки приложения и kubedoom в Kubernetes.
-- **terminal_history.txt**: История команд, выполненных в процессе выполнения работы.
 - **exp_res.txt**: Текстовый файл с результатами эксперимента.
 - **screens/**: Скриншоты процесса работы.
 - **Записи экрана** во время эксперимента находятся на [диске](https://drive.google.com/drive/folders/1VqcuCw3IaPVtw4j6ePRywP895PkENoX1?usp=sharing).
