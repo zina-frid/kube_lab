@@ -43,11 +43,22 @@ minikube start --cpus=2 --memory=3000 --nodes=3 --driver=kvm2
 ```bash
 python web_server.py 
 ```
+Приложение запустится, и к нему можно подключиться. Сервер доступен по адресу: http://localhost:8000. Отображаются все файлы в папке `course_paper`:
+
+![Каталог проекта](/screens/web_server.png)
 
 Запуск процесса сборки Docker-образ тестового приложения:
 ```bash
 docker build -t simple-web-server .
 ```
+
+После сборки образа, можно запустить контейнер:
+```bash
+docker run -d -p 8000:8000 simple-web-server
+```
+Сервер таже доступен по адресу: http://localhost:8000. В этот раз отображаются только файлы из докер образа:
+
+![Каталог docker образа](/screens/web_docker.png)
 
 Применение манифестов Kubernetes из каталога `course-paper-manifests/`:
 ```bash
@@ -56,7 +67,11 @@ kubectl apply -f web-deployment.yaml
 kubectl apply -f web-service.yaml 
 kubectl apply -f kubedoom-service.yaml 
 ```
-
+Если при при примении последнего манифеста появляется ошибка `Error from server (NotFound): error when creating "kubedoom-service.yaml": namespaces "kubedoom" not found`, то необходимо создать простраанство имен `kubedoom`:
+```bash
+kubectl create namespace kubedoom
+```
+---
 Установка Kubedoom в кластер выполняется с использованием деплоймента из репозитория разработчика:
 ```bash
 cd ..
@@ -68,6 +83,10 @@ kubectl apply -k manifest/
 ```bash
 minikube dashboard
 ```
+![Дэшборд](screens/minikube%20dasboard%20worloads.png)
+
+
+![Дэшборд2](/screens/minicube%20dasboard%20nodes.png)
 
 Подключение к Kubedoom с помощью VNC-клиента:
 ```bash
@@ -77,7 +96,11 @@ vncviewer $(minikube ip):32222
 
 После успешного подключения откроется окно Doom. 
 
+![Kubedoom](/screens/kubedoom.png)
+
 **Важно!** Для проведения эксперимента необходимо ввести читы на неуязвимость, бесконечные патроны и возможность проходить сквозь стены.
+
+![Kubedoom_cheet](/screens/kubedoom%20action%20.png)
 
 
 ## Эксперименты
